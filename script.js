@@ -61,7 +61,7 @@ function disableCSS () {
 	}
 }
 
-header.addEventListener("click", disableCSS)
+header.addEventListener("dblclick", disableCSS)
 
 
 // Fonctionnalité 6
@@ -88,7 +88,7 @@ let buttonNext = document.getElementsByClassName("btn-secondary")[0]
 let listCards = document.getElementsByClassName('row')[1]
 
 function cardNext () {
- listCards.insertBefore(listCards.lastChild, listCards.firstChild)
+ listCards.insertBefore(listCards.lastElementChild, listCards.firstElementChild)
 }
 
 buttonNext.addEventListener('click', cardNext)
@@ -100,7 +100,7 @@ let allCards = document.getElementsByClassName('row')[1]
 
 function cardPrevious (e) {
 	e.preventDefault();
-	allCards.insertBefore(allCards.firstChild, allCards.lastChild.nextSibling)
+	allCards.insertBefore(allCards.firstElementChild, allCards.lastChild.nextSibling)
 }
 
 buttonPrevious.addEventListener('click', cardPrevious)
